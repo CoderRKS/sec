@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Manrope:700|Manrope:400');
+
+:root {
+  --text: hsl(0, 0%, 99%);
+  --textDim: hsl(0, 0%, 60%);
+  --background: hsl(0, 0%, 7%);
+  --primary: hsl(155, 100%, 65%);
+  --primaryBg: hsla(155, 100%, 65%, 1%);
+  --primaryHi: hsla(155, 100%, 75%, 25%);
+  --primaryFg: hsl(155, 100%, 85%);
+  --secondary: hsl(156, 51%, 14%);
+  --secondaryFg: hsl(156, 51%, 75%);
+  --secondaryBg: hsla(156, 51%, 14%, 5%);
+  --secondaryHi: hsla(156, 51%, 30%, 50%);
+  --accent: hsl(155, 100%, 94%);
+  --accentBg: hsla(155, 100%, 94%, 1%);
+  --accentHi: hsla(155, 100%, 100%, 25%);
+}
+
+body {
+  font-family: 'Manrope';
+  font-weight: 400;
+  background-color: var(--background);
+  color: var(--text);
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  scroll-behavior: smooth;
+  cursor: default;
+}
+.grid {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  z-index: -1;
+}
+
+.grid-svg {
+  height: 80%;
+  width: 80%;
+  position: relative;
+  z-index: 1;
+}
+
+.blur {
+  height: 12rem;
+  width: 12rem;
+  background-color: var(--primary);
+  filter: blur(100px);
+  border-radius: 100px;
+  z-index: 0;
+  position: absolute;
+}
+
+.title {
+  font-size: 9rem;
+  font-weight: 700;
+  letter-spacing: -0.7rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-self: center;
+  height: 95%;
+  z-index: 1000;
+  transition: 0.1s;
+  animation: big 1.5s;
+  animation-fill-mode: forwards;
+  top: calc(0% + var(--scroll) * -0.3);
+}
+
+@keyframes big{
+  0%{
+    font-size: 9rem;
+  }
+  100%{
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .title {
+    font-size: 4rem;
+    letter-spacing: -0.3rem;
+    line-height: 0.1;
+  }
+
+  .material-icons {
+    display: flex;
+    align-items: center;
+  }
+
+}

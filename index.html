@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="logo.png" class="never_mind" />
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>GoChat</title>
+</head>
+
+<body bgcolor="black">
+    <div class="top_sec"></div>
+    <div class = "main" style="display: none;">
+    </div>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon"><ion-icon class="ionicon_icon" name="chatbubble-outline"></ion-icon></ion-icon></span>
+                    <span class="text">Chats</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon class="ionicon_icon" name="add-outline"></ion-icon></span>
+                    <span class="text">Add</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon class="ionicon_icon" name="search-outline"></ion-icon></span>
+                    <span class="text">Search</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+
+
+    <!-- Over Lays -->
+
+    <div class="overlay_user_id" id="overlay_user_id">
+        <div class="popup_user_id" id="popup_user_id">
+            <div class="left_user" id="left_user">
+                <h2>Search User..</h2>
+                <div class="nav-link-user" id="user_search">
+                    <i class="bx bx-arrow-back icon" onclick="showall()"></i>
+                    <input type="text" class="search" onkeyup="searchUsers()" id="search_box" placeholder="User Id"
+                        autocomplete="off" />
+                    <br />
+                </div>
+                <div class="user_output" id="user_output"></div>
+            </div>
+            <div class="right_user">
+                <h2>User not Found ?</h2>
+                <img src="user_not.png" width="200px" height="200px" alt="404 not found"
+                    style="margin-top: 40px; opacity: 0.8" />
+                <h4 style="font-weight: normal">
+                    Hey👋 Aren't able to find your friend??
+                </h4>
+                <p>
+                    Share this
+                    <a href="" style="color: var(--text-link); text-decoration: none">Invite Link</a>
+                    and experience a free chat...
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+       
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
